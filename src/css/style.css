@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+
+body {
+    background-color: #DDD;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.base {
+    list-style: none;
+    min-height: 200px;
+    margin: 0 auto;
+    background-color: #FFF;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 0 20px;
+   
+}
+
+.base-container {
+    width: 500px;
+    height: 500px;
+    
+}
+
+.base-home {
+    width: 700px;
+    height: 500px;
+}
+
+.base-notfound {
+    width: 700px;
+    height: 200px;
+}
+
+h1 {
+    text-align: center;
+    padding-top: 20px;
+}
+
+input {
+    height: 20px;
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #DDD;
+}
+
+button {
+    height: 40px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    color: #FFF;
+    font-weight: bold;
+}
+
+.login-button {
+    background-color: rgb(104, 226, 185);
+}
+
+.login-button:hover {
+    opacity: 0.8;
+}
+
+.register-button {
+    background-color: rgb(127, 204, 255);
+}
+
+.register-button:hover {
+    opacity: 0.8;
+}
+
+.alert-message, 
+.observation-message {
+    text-align: center;
+}
+
+.observation-message {
+    font-size: 12px;
+}
+
+ul {
+    display: inline-flex;
+}
+
+.list-item {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.list-item:hover {
+    border-bottom: 2px solid red;
+}
+
+.list-item-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    color: black;
+}
+
+.material-symbols-outlined {
+    width: 20px;
+    margin-right: 10px;
+}
+
+.info {
+    text-align: center;
+}
