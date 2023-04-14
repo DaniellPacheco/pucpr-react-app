@@ -11,8 +11,7 @@ export default class Home extends Component {
             email: "",
             nome: "",
             sobrenome: "",
-            data_nascimento: "",
-            firstOpen: false
+            data_nascimento: ""
         }
 
         this.getUser = this.getUser.bind(this);
@@ -21,7 +20,6 @@ export default class Home extends Component {
 
 
     async getUser() {
-        // console.log(localStorage.getItem("email"));
         const emailCampo = localStorage.getItem("email");
 
         const db = firebase.firestore();
@@ -37,24 +35,16 @@ export default class Home extends Component {
                         sobrenome: `Sobrenome: ${doc.data().sobrenome}`,
                         data_nascimento: `Data Nascimento: ${doc.data().data}`
                     })
-                    // console.log(doc.id, " => ", doc.data())
                 })
             })
     };
 
     componentDidMount() {
-        console.log('componentDidMount() lifecycle');
-
         this.getUser();
-
-        // Trigger update
-        this.setState({ firstOpen: !this.state.firstOpen });
     }
 
 
     render() {
-        // this.getUser();
-        console.log('Render lifecycle');
         return (
             <>
                 <div className="base base-home">
