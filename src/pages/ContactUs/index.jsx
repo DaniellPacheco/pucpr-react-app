@@ -18,7 +18,7 @@ export default class ContactUs extends Component {
                     <div>
                         <h2>Informação Aplicação:</h2>
                         <p>Linguagem: JavaScript</p>
-                        <p>Framwork: React</p>
+                        <p>Framework: React</p>
                     </div>
                 </div>
             </>

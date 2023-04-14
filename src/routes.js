@@ -16,7 +16,7 @@ export default class Rotas extends Component{
                     <Route exact={true} path="/" Component={Login} />
                     <Route exact={true} path="/home" Component={Home} />
                     <Route exact={true} path="/sobre" Component={AboutUs} />
-                    <Route exact={true} path="/contato" Component={ContactUs} />
+                    <Route exact={true} path="/tech" Component={ContactUs} />
                     <Route exact={true} path="/registro" Component={Register} />
                     
                     <Route path="*" Component={NotFound}/>

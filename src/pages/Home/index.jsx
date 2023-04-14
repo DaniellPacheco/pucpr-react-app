@@ -11,7 +11,8 @@ export default class Home extends Component {
             email: "",
             nome: "",
             sobrenome: "",
-            data_nascimento: ""
+            data_nascimento: "",
+            firstOpen: false
         }
 
         this.getUser = this.getUser.bind(this);
@@ -41,9 +42,19 @@ export default class Home extends Component {
             })
     };
 
-    render() {
+    componentDidMount() {
+        console.log('componentDidMount() lifecycle');
+
         this.getUser();
 
+        // Trigger update
+        this.setState({ firstOpen: !this.state.firstOpen });
+    }
+
+
+    render() {
+        // this.getUser();
+        console.log('Render lifecycle');
         return (
             <>
                 <div className="base base-home">
@@ -75,15 +86,15 @@ export default class Home extends Component {
                                 </Link>
                             </li>
                             <li className="list-item">
-                                <Link to="/contato" className="list-item-link">
+                                <Link to="/tech" className="list-item-link">
                                     <span class="material-symbols-outlined">
-                                        contact_mail
+                                        engineering
                                     </span>
-                                    Contato
+                                    Tech
                                 </Link>
                             </li>
                             <li className="list-item">
-                                <Link to="/sss" className="list-item-link" >
+                                <Link to="/qualquer_coisa" className="list-item-link" >
                                     <span class="material-symbols-outlined">
                                         signal_wifi_statusbar_null
                                     </span>
